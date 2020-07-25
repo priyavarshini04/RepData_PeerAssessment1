@@ -36,3 +36,13 @@ colnames(StepsPerDayFull) <- c("Date", "Steps")
 # draw the histogram
 g <- ggplot(StepsPerDayFull, aes(Steps))
 g+geom_histogram(boundary=0, binwidth=2500, col="darkblue", fill="lightblue")+ggtitle("Histogram of steps per day")+xlab("Steps")+ylab("Frequency")+theme(plot.title = element_text(face="bold", size=12))+scale_x_continuous(breaks=seq(0,25000,2500))+scale_y_continuous(breaks=seq(0,26,2))
+
+
+#4B. Calculate and report the mean and median total number of steps taken per day. Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?
+
+# Mean
+mean(StepsPerDayFull$Steps)
+## [1] 10765.64
+#Median
+median(StepsPerDayFull$Steps)
+## [1] 10762
